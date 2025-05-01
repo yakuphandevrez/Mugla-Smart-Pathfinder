@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muğla Akıllı Rota Bulucu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Muğla Akıllı Rota Bulucu</h1>
+        <div class="controls">
+            <div class="selection-area">
+                <h3>İlçeleri Seçin</h3>
+                <select id="start-district">
+                    <option value="">Başlangıç İlçesi Seçin</option>
+                </select>
+                <select id="end-district">
+                    <option value="">Varış İlçesi Seçin</option>
+                </select>
+                <button id="find-path">En Kısa Yolu Bul</button>
+            </div>
+            <div class="info-area">
+                <h3>Rota Bilgisi</h3>
+                <div id="path-info">En kısa yolu bulmak için başlangıç ve varış ilçelerini seçin.</div>
+                <div id="path-distance" class="result"></div>
+                <div id="path-steps" class="result"></div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="data.js"></script>
+    <script src="dijkstra.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
